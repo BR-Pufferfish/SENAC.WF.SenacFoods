@@ -34,11 +34,14 @@
             txt_password = new TextBox();
             txt_username = new TextBox();
             panel2 = new Panel();
+            btn_close = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(btn_close);
             panel1.Controls.Add(btn_login);
             panel1.Controls.Add(txt_password);
             panel1.Controls.Add(txt_username);
@@ -62,6 +65,7 @@
             btn_login.TabIndex = 2;
             btn_login.Text = "Entrar";
             btn_login.UseVisualStyleBackColor = false;
+            btn_login.Click += btn_login_Click;
             // 
             // txt_password
             // 
@@ -96,6 +100,18 @@
             panel2.Size = new Size(310, 653);
             panel2.TabIndex = 1;
             // 
+            // btn_close
+            // 
+            btn_close.BackColor = Color.Red;
+            btn_close.Image = (Image)resources.GetObject("btn_close.Image");
+            btn_close.Location = new Point(814, 3);
+            btn_close.Name = "btn_close";
+            btn_close.Size = new Size(32, 32);
+            btn_close.SizeMode = PictureBoxSizeMode.Zoom;
+            btn_close.TabIndex = 3;
+            btn_close.TabStop = false;
+            btn_close.Click += btn_close_Click;
+            // 
             // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -111,6 +127,7 @@
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btn_close).EndInit();
             ResumeLayout(false);
         }
 
@@ -121,5 +138,6 @@
         private TextBox txt_password;
         private TextBox txt_username;
         private Button btn_login;
+        private PictureBox btn_close;
     }
 }

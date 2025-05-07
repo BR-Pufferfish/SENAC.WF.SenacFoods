@@ -30,17 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             panel1 = new Panel();
+            linkLabel1 = new LinkLabel();
+            btn_close = new PictureBox();
             btn_login = new Button();
             txt_password = new TextBox();
             txt_username = new TextBox();
             panel2 = new Panel();
-            btn_close = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(linkLabel1);
             panel1.Controls.Add(btn_close);
             panel1.Controls.Add(btn_login);
             panel1.Controls.Add(txt_password);
@@ -51,54 +53,16 @@
             panel1.Size = new Size(849, 653);
             panel1.TabIndex = 0;
             // 
-            // btn_login
+            // linkLabel1
             // 
-            btn_login.BackColor = SystemColors.ActiveCaptionText;
-            btn_login.FlatAppearance.MouseDownBackColor = SystemColors.ActiveCaption;
-            btn_login.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
-            btn_login.FlatStyle = FlatStyle.Flat;
-            btn_login.Font = new Font("MS Reference Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_login.ForeColor = SystemColors.Info;
-            btn_login.Location = new Point(333, 339);
-            btn_login.Name = "btn_login";
-            btn_login.Size = new Size(161, 58);
-            btn_login.TabIndex = 2;
-            btn_login.Text = "Entrar";
-            btn_login.UseVisualStyleBackColor = false;
-            btn_login.Click += btn_login_Click;
-            // 
-            // txt_password
-            // 
-            txt_password.BackColor = SystemColors.WindowText;
-            txt_password.BorderStyle = BorderStyle.FixedSingle;
-            txt_password.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_password.ForeColor = SystemColors.Info;
-            txt_password.Location = new Point(247, 272);
-            txt_password.Name = "txt_password";
-            txt_password.Size = new Size(311, 35);
-            txt_password.TabIndex = 1;
-            txt_password.Text = "Senha";
-            // 
-            // txt_username
-            // 
-            txt_username.BackColor = SystemColors.WindowText;
-            txt_username.BorderStyle = BorderStyle.FixedSingle;
-            txt_username.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_username.ForeColor = SystemColors.Info;
-            txt_username.Location = new Point(247, 202);
-            txt_username.Name = "txt_username";
-            txt_username.Size = new Size(311, 35);
-            txt_username.TabIndex = 0;
-            txt_username.Text = "Usuário";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.AppWorkspace;
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(310, 653);
-            panel2.TabIndex = 1;
+            linkLabel1.AutoSize = true;
+            linkLabel1.LinkColor = SystemColors.ActiveCaptionText;
+            linkLabel1.Location = new Point(825, 45);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(12, 20);
+            linkLabel1.TabIndex = 0;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = ".";
             // 
             // btn_close
             // 
@@ -111,6 +75,59 @@
             btn_close.TabIndex = 3;
             btn_close.TabStop = false;
             btn_close.Click += btn_close_Click;
+            // 
+            // btn_login
+            // 
+            btn_login.BackColor = SystemColors.ActiveCaptionText;
+            btn_login.FlatAppearance.MouseDownBackColor = SystemColors.ActiveCaption;
+            btn_login.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
+            btn_login.FlatStyle = FlatStyle.Flat;
+            btn_login.Font = new Font("MS Reference Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_login.ForeColor = SystemColors.Info;
+            btn_login.Location = new Point(315, 330);
+            btn_login.Name = "btn_login";
+            btn_login.Size = new Size(161, 58);
+            btn_login.TabIndex = 3;
+            btn_login.Text = "Entrar";
+            btn_login.UseVisualStyleBackColor = false;
+            btn_login.Click += btn_login_Click;
+            // 
+            // txt_password
+            // 
+            txt_password.BackColor = SystemColors.WindowText;
+            txt_password.BorderStyle = BorderStyle.FixedSingle;
+            txt_password.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_password.ForeColor = SystemColors.Info;
+            txt_password.Location = new Point(240, 270);
+            txt_password.Name = "txt_password";
+            txt_password.Size = new Size(311, 35);
+            txt_password.TabIndex = 2;
+            txt_password.Text = "Senha";
+            txt_password.Enter += txt_password_Enter;
+            txt_password.Leave += txt_password_Leave;
+            // 
+            // txt_username
+            // 
+            txt_username.BackColor = SystemColors.WindowText;
+            txt_username.BorderStyle = BorderStyle.FixedSingle;
+            txt_username.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_username.ForeColor = SystemColors.Info;
+            txt_username.Location = new Point(240, 195);
+            txt_username.Name = "txt_username";
+            txt_username.Size = new Size(311, 35);
+            txt_username.TabIndex = 1;
+            txt_username.Text = "Usuário";
+            txt_username.Enter += txt_username_Enter;
+            txt_username.Leave += txt_username_Leave;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.AppWorkspace;
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(310, 653);
+            panel2.TabIndex = 1;
             // 
             // FrmLogin
             // 
@@ -139,5 +156,6 @@
         private TextBox txt_username;
         private Button btn_login;
         private PictureBox btn_close;
+        private LinkLabel linkLabel1;
     }
 }

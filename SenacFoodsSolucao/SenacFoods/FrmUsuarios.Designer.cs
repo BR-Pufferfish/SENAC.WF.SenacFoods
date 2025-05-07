@@ -31,7 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             btn_close = new PictureBox();
             groupBox1 = new GroupBox();
-            txt_usuarios = new TextBox();
+            lnk_tab0 = new LinkLabel();
+            lbl_Usuarios = new Label();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             SuspendLayout();
             // 
@@ -56,17 +57,27 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
-            // txt_usuarios
+            // lnk_tab0
             // 
-            txt_usuarios.BackColor = Color.IndianRed;
-            txt_usuarios.BorderStyle = BorderStyle.FixedSingle;
-            txt_usuarios.Font = new Font("Verdana", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_usuarios.Location = new Point(200, 12);
-            txt_usuarios.Name = "txt_usuarios";
-            txt_usuarios.Size = new Size(400, 40);
-            txt_usuarios.TabIndex = 4;
-            txt_usuarios.Text = "Usuários";
-            txt_usuarios.TextAlign = HorizontalAlignment.Center;
+            lnk_tab0.AutoSize = true;
+            lnk_tab0.Location = new Point(702, 47);
+            lnk_tab0.Name = "lnk_tab0";
+            lnk_tab0.Size = new Size(86, 20);
+            lnk_tab0.TabIndex = 5;
+            lnk_tab0.TabStop = true;
+            lnk_tab0.Text = "InvisibleTab";
+            lnk_tab0.Visible = false;
+            // 
+            // lbl_Usuarios
+            // 
+            lbl_Usuarios.AutoSize = true;
+            lbl_Usuarios.BackColor = Color.IndianRed;
+            lbl_Usuarios.Font = new Font("Verdana", 16.2F);
+            lbl_Usuarios.Location = new Point(327, 18);
+            lbl_Usuarios.Name = "lbl_Usuarios";
+            lbl_Usuarios.Size = new Size(139, 34);
+            lbl_Usuarios.TabIndex = 8;
+            lbl_Usuarios.Text = "Usuários";
             // 
             // FrmUsuarios
             // 
@@ -74,11 +85,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 500);
-            Controls.Add(txt_usuarios);
+            Controls.Add(lbl_Usuarios);
+            Controls.Add(lnk_tab0);
             Controls.Add(groupBox1);
             Controls.Add(btn_close);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuarios";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmUsuarios";
             ((System.ComponentModel.ISupportInitialize)btn_close).EndInit();
             ResumeLayout(false);
@@ -89,6 +102,7 @@
 
         private PictureBox btn_close;
         private GroupBox groupBox1;
-        private TextBox txt_usuarios;
+        private LinkLabel lnk_tab0;
+        private Label lbl_Usuarios;
     }
 }

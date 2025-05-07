@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmComanda));
             btn_close = new PictureBox();
-            txt_usuarios = new TextBox();
             groupBox1 = new GroupBox();
+            lnk_tab0 = new LinkLabel();
+            lbl_comanda = new Label();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             SuspendLayout();
             // 
@@ -47,26 +48,36 @@
             btn_close.TabStop = false;
             btn_close.Click += btn_close_Click;
             // 
-            // txt_usuarios
-            // 
-            txt_usuarios.BackColor = Color.YellowGreen;
-            txt_usuarios.BorderStyle = BorderStyle.FixedSingle;
-            txt_usuarios.Font = new Font("Verdana", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_usuarios.Location = new Point(200, 12);
-            txt_usuarios.Name = "txt_usuarios";
-            txt_usuarios.Size = new Size(400, 40);
-            txt_usuarios.TabIndex = 5;
-            txt_usuarios.Text = "Comanda";
-            txt_usuarios.TextAlign = HorizontalAlignment.Center;
-            // 
             // groupBox1
             // 
-            groupBox1.Location = new Point(12, 78);
+            groupBox1.Location = new Point(0, 90);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 410);
+            groupBox1.Size = new Size(795, 410);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // lnk_tab0
+            // 
+            lnk_tab0.AutoSize = true;
+            lnk_tab0.Location = new Point(702, 47);
+            lnk_tab0.Name = "lnk_tab0";
+            lnk_tab0.Size = new Size(86, 20);
+            lnk_tab0.TabIndex = 7;
+            lnk_tab0.TabStop = true;
+            lnk_tab0.Text = "InvisibleTab";
+            lnk_tab0.Visible = false;
+            // 
+            // lbl_comanda
+            // 
+            lbl_comanda.AutoSize = true;
+            lbl_comanda.BackColor = Color.YellowGreen;
+            lbl_comanda.Font = new Font("Verdana", 16.2F);
+            lbl_comanda.Location = new Point(326, 30);
+            lbl_comanda.Name = "lbl_comanda";
+            lbl_comanda.Size = new Size(148, 34);
+            lbl_comanda.TabIndex = 0;
+            lbl_comanda.Text = "Comanda";
             // 
             // FrmComanda
             // 
@@ -74,8 +85,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 500);
+            Controls.Add(lbl_comanda);
+            Controls.Add(lnk_tab0);
             Controls.Add(groupBox1);
-            Controls.Add(txt_usuarios);
             Controls.Add(btn_close);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmComanda";
@@ -89,7 +101,8 @@
         #endregion
 
         private PictureBox btn_close;
-        private TextBox txt_usuarios;
         private GroupBox groupBox1;
+        private LinkLabel lnk_tab0;
+        private Label lbl_comanda;
     }
 }

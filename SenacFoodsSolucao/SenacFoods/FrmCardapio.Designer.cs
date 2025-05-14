@@ -71,13 +71,12 @@
             // lnk_tab0
             // 
             lnk_tab0.AutoSize = true;
-            lnk_tab0.Location = new Point(705, 30);
+            lnk_tab0.Location = new Point(705, 45);
             lnk_tab0.Name = "lnk_tab0";
             lnk_tab0.Size = new Size(86, 20);
             lnk_tab0.TabIndex = 0;
             lnk_tab0.TabStop = true;
             lnk_tab0.Text = "InvisibleTab";
-            lnk_tab0.Visible = false;
             // 
             // FrmCardapio
             // 

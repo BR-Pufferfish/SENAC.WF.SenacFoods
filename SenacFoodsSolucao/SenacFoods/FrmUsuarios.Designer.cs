@@ -31,9 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             btn_close = new PictureBox();
             groupBox1 = new GroupBox();
+            dataGridView1 = new DataGridView();
             lnk_tab0 = new LinkLabel();
             lbl_Usuarios = new Label();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btn_close
@@ -50,23 +53,33 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dataGridView1);
             groupBox1.Location = new Point(12, 78);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 410);
+            groupBox1.Size = new Size(776, 402);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(15, 30);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(750, 360);
+            dataGridView1.TabIndex = 0;
+            // 
             // lnk_tab0
             // 
             lnk_tab0.AutoSize = true;
+            lnk_tab0.LinkColor = SystemColors.ActiveCaptionText;
             lnk_tab0.Location = new Point(702, 47);
             lnk_tab0.Name = "lnk_tab0";
             lnk_tab0.Size = new Size(86, 20);
-            lnk_tab0.TabIndex = 5;
+            lnk_tab0.TabIndex = 1;
             lnk_tab0.TabStop = true;
             lnk_tab0.Text = "InvisibleTab";
-            lnk_tab0.Visible = false;
             // 
             // lbl_Usuarios
             // 
@@ -76,7 +89,7 @@
             lbl_Usuarios.Location = new Point(327, 18);
             lbl_Usuarios.Name = "lbl_Usuarios";
             lbl_Usuarios.Size = new Size(139, 34);
-            lbl_Usuarios.TabIndex = 8;
+            lbl_Usuarios.TabIndex = 2;
             lbl_Usuarios.Text = "Usuários";
             // 
             // FrmUsuarios
@@ -94,6 +107,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmUsuarios";
             ((System.ComponentModel.ISupportInitialize)btn_close).EndInit();
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,5 +119,6 @@
         private GroupBox groupBox1;
         private LinkLabel lnk_tab0;
         private Label lbl_Usuarios;
+        private DataGridView dataGridView1;
     }
 }

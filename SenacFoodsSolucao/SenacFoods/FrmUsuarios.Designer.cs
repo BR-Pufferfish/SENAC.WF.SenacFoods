@@ -97,7 +97,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 500);
+            ClientSize = new Size(800, 501);
             Controls.Add(lbl_Usuarios);
             Controls.Add(lnk_tab0);
             Controls.Add(groupBox1);

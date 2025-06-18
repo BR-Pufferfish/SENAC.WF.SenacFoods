@@ -1,3 +1,5 @@
+using Microsoft.IdentityModel.Tokens;
+
 namespace SenacFoods
 {
     public partial class FrmLogin : Form
@@ -19,11 +21,25 @@ namespace SenacFoods
 
         private bool ValidarLogin(string nome, string senha)
         {
-            if (nome == "admin" && senha == "12345678")
+            bool usuarioValido = false;
+            //Conecta no banco se o mesmo estiver acessivel.
+            using(var banco = new ComandaDBContext())
+            {
+                //Consulta a tabela usando SELECT * FROM Usuarios WHERE Emai = ? AND Senha = ?
+                var usuario = banco
+                                .Usuarios
+                                    .FirstOrDefault(u => u.Email == nome && u.Senha == senha);
+                if (usuario is not null)
+                    usuarioValido = true;
+            }
+
+            // SE email e senha forem validos
+            if (usuarioValido)
             {
                 return true;
             }
-            else {
+            else
+            {
                 MessageBox.Show("Usuário ou Senha incorreto(s)");
             }
             return false;

@@ -20,7 +20,7 @@ namespace SenacFoods
         }
 
         private bool ValidarLogin(string nome, string senha)
-        {
+          {
             bool usuarioValido = false;
             //Conecta no banco se o mesmo estiver acessivel.
             using(var banco = new ComandaDBContext())
@@ -28,7 +28,7 @@ namespace SenacFoods
                 //Consulta a tabela usando SELECT * FROM Usuarios WHERE Emai = ? AND Senha = ?
                 var usuario = banco
                                 .Usuarios
-                                    .FirstOrDefault(u => u.Email == nome && u.Senha == senha);
+                                    .FirstOrDefault(u => u.Email == nome.ToLower() && u.Senha == senha);
                 if (usuario is not null)
                     usuarioValido = true;
             }

@@ -21,5 +21,26 @@ namespace SenacFoods
         {
             Close();
         }
+
+        private void FrmCardapio_Load(object sender, EventArgs e)
+        {
+            BuscarCardapio();
+        }
+
+        private void BuscarCardapio()
+        {
+            //conectar no banco de dados
+            using(var bd = new ComandaDBContext())
+            {
+                //consultar a tabela cardapio item
+                var cardapios = bd.CardapioItems.ToList();
+
+                //popular o grid com a tabela consultada
+                dataGridView1.DataSource = cardapios;
+
+            }
+
+
+        }
     }
 }

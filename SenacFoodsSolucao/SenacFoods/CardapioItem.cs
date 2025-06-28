@@ -14,6 +14,7 @@ namespace SenacFoods
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         //public string Titulo { get; set; } = string.Empty; assim ele não critica o titulo e etc, pois recebe um valor padrão
+        // Ou { get; set; } = default!;  que é mais performático
         public string Titulo { get; set; }
         public string Descricao { get; set; }
         public decimal Preco { get; set; }

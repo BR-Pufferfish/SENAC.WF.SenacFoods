@@ -42,12 +42,15 @@ namespace SenacFoods
                     PossuiPreparo = possuiPreparo
                 };
 
-                //Adicionar o cardapio;
+                //Adicionar o cardapio e Salvar as alterações no banco;
                 banco.CardapioItems.Add(cardapio);
                 banco.SaveChanges();
-
-                //Salvar as alterações no banco;
             }
+            MessageBox.Show("Cardapio salvo com sucesso",
+                "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

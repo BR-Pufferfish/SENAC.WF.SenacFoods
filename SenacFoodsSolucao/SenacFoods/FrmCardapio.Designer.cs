@@ -123,6 +123,7 @@
             btn_incluir.TabIndex = 10;
             btn_incluir.Text = "Incluir";
             btn_incluir.UseVisualStyleBackColor = false;
+            btn_incluir.Click += btn_incluir_Click;
             // 
             // lbl_Cardapio
             // 

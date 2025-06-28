@@ -30,7 +30,7 @@ namespace SenacFoods
         private void BuscarCardapio()
         {
             //conectar no banco de dados
-            using(var bd = new ComandaDBContext())
+            using (var bd = new ComandaDBContext())
             {
                 //consultar a tabela cardapio item
                 var cardapios = bd.CardapioItems.ToList();
@@ -41,6 +41,11 @@ namespace SenacFoods
             }
 
 
+        }
+
+        private void btn_incluir_Click(object sender, EventArgs e)
+        {
+            new FrmCardapioCad().ShowDialog();
         }
     }
 }

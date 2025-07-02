@@ -52,5 +52,20 @@ namespace SenacFoods
                 MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmCardapioCad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

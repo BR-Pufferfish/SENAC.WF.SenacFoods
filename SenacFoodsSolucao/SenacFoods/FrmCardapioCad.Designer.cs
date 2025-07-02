@@ -56,6 +56,7 @@
             btn_close.SizeMode = PictureBoxSizeMode.Zoom;
             btn_close.TabIndex = 3;
             btn_close.TabStop = false;
+            btn_close.Click += btn_close_Click;
             // 
             // groupBox1
             // 
@@ -156,6 +157,7 @@
             btn_Cancelar.TabIndex = 2;
             btn_Cancelar.Text = "Cancelar";
             btn_Cancelar.UseVisualStyleBackColor = false;
+            btn_Cancelar.Click += btn_Cancelar_Click;
             // 
             // btn_Salvar
             // 
@@ -195,6 +197,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCardapioCad";
             Text = "   ";
+            Load += FrmCardapioCad_Load;
             ((System.ComponentModel.ISupportInitialize)btn_close).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

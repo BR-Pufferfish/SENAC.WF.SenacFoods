@@ -33,7 +33,7 @@
             btn_Excluir = new Button();
             btn_Editar = new Button();
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
+            txt_Pesquisa = new TextBox();
             lbl_Pesquisar = new Label();
             btn_incluir = new Button();
             lbl_Cardapio = new Label();
@@ -84,26 +84,30 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(27, 29);
             dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(1012, 381);
             dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // txt_Pesquisa
             // 
-            textBox1.Location = new Point(168, 118);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(480, 29);
-            textBox1.TabIndex = 8;
+            txt_Pesquisa.Location = new Point(165, 115);
+            txt_Pesquisa.Margin = new Padding(4);
+            txt_Pesquisa.Name = "txt_Pesquisa";
+            txt_Pesquisa.Size = new Size(480, 29);
+            txt_Pesquisa.TabIndex = 8;
+            txt_Pesquisa.TextChanged += txt_Pesquisa_TextChanged;
             // 
             // lbl_Pesquisar
             // 
             lbl_Pesquisar.BackColor = SystemColors.ActiveCaption;
             lbl_Pesquisar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_Pesquisar.Location = new Point(40, 117);
+            lbl_Pesquisar.Location = new Point(40, 115);
             lbl_Pesquisar.Margin = new Padding(4, 0, 4, 0);
             lbl_Pesquisar.Name = "lbl_Pesquisar";
             lbl_Pesquisar.Size = new Size(120, 30);
@@ -169,7 +173,7 @@
             ClientSize = new Size(1090, 665);
             Controls.Add(btn_incluir);
             Controls.Add(lbl_Pesquisar);
-            Controls.Add(textBox1);
+            Controls.Add(txt_Pesquisa);
             Controls.Add(lbl_Cardapio);
             Controls.Add(groupBox1);
             Controls.Add(lnk_tab0);
@@ -194,7 +198,7 @@
         private Button btn_Excluir;
         private Button btn_Editar;
         private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private TextBox txt_Pesquisa;
         private Label lbl_Pesquisar;
         private Button btn_incluir;
         private Label lbl_Cardapio;

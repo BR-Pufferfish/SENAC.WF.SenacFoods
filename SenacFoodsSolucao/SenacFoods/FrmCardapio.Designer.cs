@@ -69,10 +69,12 @@
             btn_Excluir.TabIndex = 2;
             btn_Excluir.Text = "Excluir";
             btn_Excluir.UseVisualStyleBackColor = false;
+            btn_Excluir.Click += btn_Excluir_Click;
             // 
             // btn_Editar
             // 
             btn_Editar.BackColor = Color.Turquoise;
+            btn_Editar.Enabled = false;
             btn_Editar.FlatStyle = FlatStyle.Flat;
             btn_Editar.Location = new Point(943, 418);
             btn_Editar.Margin = new Padding(4);
@@ -81,6 +83,7 @@
             btn_Editar.TabIndex = 1;
             btn_Editar.Text = "Editar";
             btn_Editar.UseVisualStyleBackColor = false;
+            btn_Editar.Click += btn_Editar_Click;
             // 
             // dataGridView1
             // 
@@ -93,6 +96,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(1012, 381);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // txt_Pesquisa
             // 

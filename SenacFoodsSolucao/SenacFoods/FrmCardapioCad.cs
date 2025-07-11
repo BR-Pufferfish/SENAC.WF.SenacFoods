@@ -12,6 +12,7 @@ namespace SenacFoods
 {
     public partial class FrmCardapioCad : Form
     {
+        private CardapioItem _cardapioitem;
         public FrmCardapioCad()
         {
             InitializeComponent();
@@ -19,15 +20,69 @@ namespace SenacFoods
 
         public FrmCardapioCad(CardapioItem cardapioItem)
         {
+            _cardapioitem = cardapioItem;
             InitializeComponent();
+
+            //Carregar dados da tela
+
+            CarregarDadosDaTela();
+        }
+
+        private void CarregarDadosDaTela()
+        {
+            //popular os campos da tela
+            if (_cardapioitem != null)
+            {
+                txt_titulo.Text = _cardapioitem.Titulo;
+                rtxt_descricao.Text = _cardapioitem.Descricao;
+                txt_preco.Text = _cardapioitem.Preco.ToString("F2");
+                chk_preparo.Checked = _cardapioitem.PossuiPreparo;
+            }
         }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            SalvarCardapio();
+            //inserir
+            if (_cardapioitem == null)
+            {
+                InserirCardapio();
+            }
+            //atualizar
+            else
+            {
+                AtualizarCardapio();
+            }
         }
 
-        private void SalvarCardapio()
+        private void AtualizarCardapio()
+        {
+            using (var banco = new ComandaDBContext())
+            {
+                //captar os dados da tela
+                string titulo = txt_titulo.Text;
+                string descricao = rtxt_descricao.Text;
+                decimal.TryParse(txt_preco.Text, out var preco);
+                bool possuiPreparo = chk_preparo.Checked;
+
+                //atualizar o cardapio
+                var cardapioItem = banco.CardapioItems.First(x => x.Id == _cardapioitem.Id);
+                cardapioItem.Titulo = titulo;
+                cardapioItem.Descricao = descricao;
+                cardapioItem.Preco = preco;
+                cardapioItem.PossuiPreparo = possuiPreparo;
+
+                //salvar as alterações no banco
+                banco.CardapioItems.Update(cardapioItem);
+                banco.SaveChanges();
+            }
+            MessageBox.Show("Cardapio salvo com sucesso",
+                "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void InserirCardapio()
         {
             // Conectar;
             using (var banco = new ComandaDBContext())

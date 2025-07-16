@@ -41,10 +41,7 @@ namespace SenacFoods
                 }
                 //popular o grid com a tabela consultada
                 dataGridView1.DataSource = cardapios.ToList();
-
             }
-
-
         }
 
         private void btn_incluir_Click(object sender, EventArgs e)

@@ -54,6 +54,7 @@
             btn_close.SizeMode = PictureBoxSizeMode.Zoom;
             btn_close.TabIndex = 3;
             btn_close.TabStop = false;
+            btn_close.Click += btn_close_Click;
             // 
             // groupBox1
             // 

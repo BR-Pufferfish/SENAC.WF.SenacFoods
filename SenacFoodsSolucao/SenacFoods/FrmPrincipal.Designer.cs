@@ -32,13 +32,13 @@
             groupBox1 = new GroupBox();
             btn_usuarios = new Button();
             btn_pedido_cozinha = new Button();
+            btn_Mesas = new Button();
             btn_comanda = new Button();
             btn_cardapio = new Button();
             btn_close = new PictureBox();
             btn_minimize = new PictureBox();
             lnk_tab0 = new LinkLabel();
             lbl_bemvindo = new Label();
-            btn_Mesas = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_minimize).BeginInit();
@@ -92,6 +92,22 @@
             btn_pedido_cozinha.Text = "Pedido Cozinha";
             btn_pedido_cozinha.UseVisualStyleBackColor = false;
             btn_pedido_cozinha.Click += btn_pedido_cozinha_Click;
+            // 
+            // btn_Mesas
+            // 
+            btn_Mesas.BackColor = Color.OrangeRed;
+            btn_Mesas.FlatAppearance.MouseDownBackColor = Color.Green;
+            btn_Mesas.FlatAppearance.MouseOverBackColor = Color.ForestGreen;
+            btn_Mesas.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Mesas.ForeColor = SystemColors.ControlText;
+            btn_Mesas.Location = new Point(705, 125);
+            btn_Mesas.Margin = new Padding(3, 2, 3, 2);
+            btn_Mesas.Name = "btn_Mesas";
+            btn_Mesas.Size = new Size(150, 112);
+            btn_Mesas.TabIndex = 2;
+            btn_Mesas.Text = "Mesa";
+            btn_Mesas.UseVisualStyleBackColor = false;
+            btn_Mesas.Click += btn_Mesas_Click;
             // 
             // btn_comanda
             // 
@@ -173,21 +189,6 @@
             lbl_bemvindo.Size = new Size(158, 29);
             lbl_bemvindo.TabIndex = 3;
             lbl_bemvindo.Text = "lbl_bemvindo";
-            // 
-            // btn_Mesas
-            // 
-            btn_Mesas.BackColor = Color.OrangeRed;
-            btn_Mesas.FlatAppearance.MouseDownBackColor = Color.Green;
-            btn_Mesas.FlatAppearance.MouseOverBackColor = Color.ForestGreen;
-            btn_Mesas.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Mesas.ForeColor = SystemColors.ControlText;
-            btn_Mesas.Location = new Point(705, 125);
-            btn_Mesas.Margin = new Padding(3, 2, 3, 2);
-            btn_Mesas.Name = "btn_Mesas";
-            btn_Mesas.Size = new Size(150, 112);
-            btn_Mesas.TabIndex = 2;
-            btn_Mesas.Text = "Mesa";
-            btn_Mesas.UseVisualStyleBackColor = false;
             // 
             // FrmPrincipal
             // 

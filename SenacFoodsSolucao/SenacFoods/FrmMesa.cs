@@ -32,7 +32,8 @@ namespace SenacFoods
                 var mesas = bd.Mesas.AsQueryable();
                 if (!string.IsNullOrEmpty(txt_Pesquisa.Text))
                 {
-                    mesas = mesas.Where(c => c.NumeroMesa.Contains(txt_Pesquisa.Text) || c.SituacaoMesa.Contains(txt_Pesquisa.Text));
+                    mesas = mesas.Where(c => c.NumeroMesa.ToString().Contains(txt_Pesquisa.Text) ||
+                                        c.SituacaoMesa.ToString().Contains(txt_Pesquisa.Text));
                 }
                 //popular o grid com a tabela consultada
                 dataGridView1.DataSource = mesas.ToList();
@@ -94,6 +95,11 @@ namespace SenacFoods
         {
             //chama o método buscar mesas
             BuscarMesas();
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -30,9 +30,9 @@ namespace SenacFoods
 
         private void CarregarDadosDaTela()
         {
-            if(_mesa != null)
+            if (_mesa != null)
             {
-                txt_numeroMesa.Text = _mesa.NumeroMesa.ToString;
+                txt_numeroMesa.Text = _mesa.NumeroMesa.ToString();
             }
         }
 
@@ -44,6 +44,36 @@ namespace SenacFoods
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btn_Salvar_Click(object sender, EventArgs e)
+        {
+            //inserir
+            if (_mesa == null)
+            {
+                InserirMesa();
+            }
+            //atualizar
+            else
+            {
+                AtualizarMesa();
+            }
+        }
+
+        private void AtualizarMesa()
+        {
+            using (var banco = new ComandaDBContext())
+            {
+
+            }
+        }
+
+        private void InserirMesa()
+        {
+            using (var banco = new ComandaDBContext())
+            {
+
+            }
         }
     }
 }

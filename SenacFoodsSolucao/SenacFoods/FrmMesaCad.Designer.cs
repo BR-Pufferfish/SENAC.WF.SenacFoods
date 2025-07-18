@@ -99,6 +99,7 @@
             btn_Salvar.TabIndex = 1;
             btn_Salvar.Text = "Salvar";
             btn_Salvar.UseVisualStyleBackColor = false;
+            btn_Salvar.Click += btn_Salvar_Click;
             // 
             // btn_close
             // 

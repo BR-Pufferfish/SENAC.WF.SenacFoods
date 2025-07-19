@@ -48,29 +48,30 @@
             panel1.Controls.Add(txt_password);
             panel1.Controls.Add(txt_username);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(333, 0);
+            panel1.Location = new Point(291, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(849, 653);
+            panel1.Size = new Size(743, 490);
             panel1.TabIndex = 0;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = SystemColors.ActiveCaptionText;
-            linkLabel1.Location = new Point(825, 45);
+            linkLabel1.Location = new Point(722, 34);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(12, 20);
+            linkLabel1.Size = new Size(10, 15);
             linkLabel1.TabIndex = 0;
-            linkLabel1.TabStop = true;
             linkLabel1.Text = ".";
             // 
             // btn_close
             // 
             btn_close.BackColor = Color.Red;
             btn_close.Image = (Image)resources.GetObject("btn_close.Image");
-            btn_close.Location = new Point(814, 3);
+            btn_close.Location = new Point(712, 2);
+            btn_close.Margin = new Padding(3, 2, 3, 2);
             btn_close.Name = "btn_close";
-            btn_close.Size = new Size(32, 32);
+            btn_close.Size = new Size(28, 24);
             btn_close.SizeMode = PictureBoxSizeMode.Zoom;
             btn_close.TabIndex = 3;
             btn_close.TabStop = false;
@@ -82,11 +83,12 @@
             btn_login.FlatAppearance.MouseDownBackColor = SystemColors.ActiveCaption;
             btn_login.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_login.FlatStyle = FlatStyle.Flat;
-            btn_login.Font = new Font("MS Reference Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_login.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_login.ForeColor = SystemColors.Info;
-            btn_login.Location = new Point(315, 330);
+            btn_login.Location = new Point(276, 248);
+            btn_login.Margin = new Padding(3, 2, 3, 2);
             btn_login.Name = "btn_login";
-            btn_login.Size = new Size(161, 58);
+            btn_login.Size = new Size(141, 44);
             btn_login.TabIndex = 3;
             btn_login.Text = "Entrar";
             btn_login.UseVisualStyleBackColor = false;
@@ -96,11 +98,12 @@
             // 
             txt_password.BackColor = SystemColors.WindowText;
             txt_password.BorderStyle = BorderStyle.FixedSingle;
-            txt_password.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_password.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_password.ForeColor = SystemColors.Info;
-            txt_password.Location = new Point(240, 270);
+            txt_password.Location = new Point(210, 202);
+            txt_password.Margin = new Padding(3, 2, 3, 2);
             txt_password.Name = "txt_password";
-            txt_password.Size = new Size(311, 35);
+            txt_password.Size = new Size(272, 28);
             txt_password.TabIndex = 2;
             txt_password.Text = "Senha";
             txt_password.Enter += txt_password_Enter;
@@ -110,11 +113,12 @@
             // 
             txt_username.BackColor = SystemColors.WindowText;
             txt_username.BorderStyle = BorderStyle.FixedSingle;
-            txt_username.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_username.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_username.ForeColor = SystemColors.Info;
-            txt_username.Location = new Point(240, 195);
+            txt_username.Location = new Point(210, 146);
+            txt_username.Margin = new Padding(3, 2, 3, 2);
             txt_username.Name = "txt_username";
-            txt_username.Size = new Size(311, 35);
+            txt_username.Size = new Size(272, 28);
             txt_username.TabIndex = 1;
             txt_username.Text = "Usuário";
             txt_username.Enter += txt_username_Enter;
@@ -125,20 +129,22 @@
             panel2.BackColor = SystemColors.AppWorkspace;
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(310, 653);
+            panel2.Size = new Size(271, 490);
             panel2.TabIndex = 1;
             // 
             // FrmLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1182, 653);
+            ClientSize = new Size(1034, 490);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

@@ -64,16 +64,46 @@ namespace SenacFoods
         {
             using (var banco = new ComandaDBContext())
             {
+                //captar os dados da tela
+                int.TryParse(txt_numeroMesa.Text, out var nMesa);
 
+                //atualizar a mesa
+                var mesa = banco.Mesas.First(x => x.Id == _mesa.Id);
+                mesa.NumeroMesa = nMesa;
+
+                //salvar as alterações no banco
+                banco.Mesas.Update(mesa);
+                banco.SaveChanges();
             }
+            MessageBox.Show("Mesa salva com sucesso",
+                "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void InserirMesa()
         {
             using (var banco = new ComandaDBContext())
             {
+                //Captar os dados da tela
+                int.TryParse(txt_numeroMesa.Text, out var nMesa);
 
+                //Criar um novo cardapio;
+                var mesa = new Mesa()
+                {
+                    NumeroMesa = nMesa
+                };
+
+                //Adicionar o cardapio e Salvar as alterações no banco;
+                banco.Mesas.Add(mesa);
+                banco.SaveChanges();
             }
+            MessageBox.Show("Mesa salva com sucesso",
+                "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

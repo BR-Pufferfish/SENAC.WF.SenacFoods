@@ -37,7 +37,6 @@ namespace SenacFoods
                 }
                 //popular o grid com a tabela consultada
                 dataGridView1.DataSource = mesas.ToList();
-
             }
         }
 

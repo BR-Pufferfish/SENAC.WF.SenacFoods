@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMesaCad));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioCad));
             groupBox1 = new GroupBox();
             txt_numeroMesa = new TextBox();
             lbl_NumeroMesa = new Label();
             btn_Cancelar = new Button();
             btn_Salvar = new Button();
             btn_close = new PictureBox();
-            lbl_Cardapio = new Label();
+            lbl_MesaCad = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             SuspendLayout();
@@ -114,17 +114,17 @@
             btn_close.TabStop = false;
             btn_close.Click += btn_close_Click;
             // 
-            // lbl_Cardapio
+            // lbl_MesaCad
             // 
-            lbl_Cardapio.AutoSize = true;
-            lbl_Cardapio.BackColor = Color.FromArgb(255, 255, 128);
-            lbl_Cardapio.Font = new Font("Verdana", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_Cardapio.Location = new Point(370, 15);
-            lbl_Cardapio.Margin = new Padding(4, 0, 4, 0);
-            lbl_Cardapio.Name = "lbl_Cardapio";
-            lbl_Cardapio.Size = new Size(350, 45);
-            lbl_Cardapio.TabIndex = 18;
-            lbl_Cardapio.Text = "Cadastro de Mesa";
+            lbl_MesaCad.AutoSize = true;
+            lbl_MesaCad.BackColor = Color.FromArgb(255, 255, 128);
+            lbl_MesaCad.Font = new Font("Verdana", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_MesaCad.Location = new Point(370, 15);
+            lbl_MesaCad.Margin = new Padding(4, 0, 4, 0);
+            lbl_MesaCad.Name = "lbl_MesaCad";
+            lbl_MesaCad.Size = new Size(350, 45);
+            lbl_MesaCad.TabIndex = 18;
+            lbl_MesaCad.Text = "Cadastro de Mesa";
             // 
             // FrmMesaCad
             // 
@@ -134,7 +134,7 @@
             ClientSize = new Size(1090, 572);
             Controls.Add(groupBox1);
             Controls.Add(btn_close);
-            Controls.Add(lbl_Cardapio);
+            Controls.Add(lbl_MesaCad);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMesaCad";
             Text = "FrmMesaCad";
@@ -153,6 +153,6 @@
         private Button btn_Cancelar;
         private Button btn_Salvar;
         private PictureBox btn_close;
-        private Label lbl_Cardapio;
+        private Label lbl_MesaCad;
     }
 }

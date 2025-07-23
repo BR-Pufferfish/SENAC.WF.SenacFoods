@@ -50,7 +50,7 @@
             btn_close.Location = new Point(1045, 5);
             btn_close.Margin = new Padding(4, 3, 4, 3);
             btn_close.Name = "btn_close";
-            btn_close.Size = new Size(36, 34);
+            btn_close.Size = new Size(36, 36);
             btn_close.SizeMode = PictureBoxSizeMode.Zoom;
             btn_close.TabIndex = 3;
             btn_close.TabStop = false;

@@ -64,6 +64,15 @@ namespace SenacFoods
                 decimal.TryParse(txt_preco.Text, out var preco);
                 bool possuiPreparo = chk_preparo.Checked;
 
+                if (banco.CardapioItems.Any(ci => ci.Titulo == titulo && ci.Id != _cardapioitem.Id))
+                {
+                    MessageBox.Show("Já existe um cardápio com esse título",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
                 //atualizar o cardapio
                 var cardapioItem = banco.CardapioItems.First(x => x.Id == _cardapioitem.Id);
                 cardapioItem.Titulo = titulo;
@@ -92,6 +101,15 @@ namespace SenacFoods
                 string descricao = rtxt_descricao.Text;
                 decimal.TryParse(txt_preco.Text, out var preco);
                 bool possuiPreparo = chk_preparo.Checked;
+
+                if (banco.CardapioItems.Any(ci => ci.Titulo == titulo))
+                {
+                    MessageBox.Show("Já existe um cardápio com esse título",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
 
                 //Criar um novo cardapio;
                 var cardapio = new CardapioItem()

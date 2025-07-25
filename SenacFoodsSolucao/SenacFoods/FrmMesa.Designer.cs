@@ -173,6 +173,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "FrmMesa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmMesa";
             Load += FrmMesa_Load;
             ((System.ComponentModel.ISupportInitialize)btn_close).EndInit();

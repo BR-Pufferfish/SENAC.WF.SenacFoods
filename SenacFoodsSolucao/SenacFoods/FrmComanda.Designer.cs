@@ -31,18 +31,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmComanda));
             btn_close = new PictureBox();
             groupBox1 = new GroupBox();
-            lnk_tab0 = new LinkLabel();
+            btn_Excluir = new Button();
+            btn_Editar = new Button();
+            dataGridView1 = new DataGridView();
             lbl_comanda = new Label();
+            btn_incluir = new Button();
+            lbl_Pesquisar = new Label();
+            txt_Pesquisa = new TextBox();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btn_close
             // 
             btn_close.BackColor = Color.Red;
             btn_close.Image = (Image)resources.GetObject("btn_close.Image");
-            btn_close.Location = new Point(756, 12);
+            btn_close.Location = new Point(1045, 5);
+            btn_close.Margin = new Padding(4, 3, 4, 3);
             btn_close.Name = "btn_close";
-            btn_close.Size = new Size(32, 32);
+            btn_close.Size = new Size(36, 34);
             btn_close.SizeMode = PictureBoxSizeMode.Zoom;
             btn_close.TabIndex = 2;
             btn_close.TabStop = false;
@@ -50,49 +58,127 @@
             // 
             // groupBox1
             // 
-            groupBox1.Location = new Point(0, 90);
+            groupBox1.Controls.Add(btn_Excluir);
+            groupBox1.Controls.Add(btn_Editar);
+            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Location = new Point(10, 180);
+            groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(795, 410);
+            groupBox1.Padding = new Padding(4, 3, 4, 3);
+            groupBox1.Size = new Size(1059, 472);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
-            // lnk_tab0
+            // btn_Excluir
             // 
-            lnk_tab0.AutoSize = true;
-            lnk_tab0.Location = new Point(702, 47);
-            lnk_tab0.Name = "lnk_tab0";
-            lnk_tab0.Size = new Size(86, 20);
-            lnk_tab0.TabIndex = 1;
-            lnk_tab0.TabStop = true;
-            lnk_tab0.Text = "InvisibleTab";
+            btn_Excluir.BackColor = Color.IndianRed;
+            btn_Excluir.FlatStyle = FlatStyle.Flat;
+            btn_Excluir.Location = new Point(836, 414);
+            btn_Excluir.Margin = new Padding(4);
+            btn_Excluir.Name = "btn_Excluir";
+            btn_Excluir.Size = new Size(96, 32);
+            btn_Excluir.TabIndex = 5;
+            btn_Excluir.Text = "Excluir";
+            btn_Excluir.UseVisualStyleBackColor = false;
+            btn_Excluir.Click += btn_Excluir_Click;
+            // 
+            // btn_Editar
+            // 
+            btn_Editar.BackColor = Color.Turquoise;
+            btn_Editar.Enabled = false;
+            btn_Editar.FlatStyle = FlatStyle.Flat;
+            btn_Editar.Location = new Point(940, 414);
+            btn_Editar.Margin = new Padding(4);
+            btn_Editar.Name = "btn_Editar";
+            btn_Editar.Size = new Size(96, 32);
+            btn_Editar.TabIndex = 4;
+            btn_Editar.Text = "Editar";
+            btn_Editar.UseVisualStyleBackColor = false;
+            btn_Editar.Click += btn_Editar_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(22, 26);
+            dataGridView1.Margin = new Padding(4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(1012, 381);
+            dataGridView1.TabIndex = 3;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // lbl_comanda
             // 
             lbl_comanda.AutoSize = true;
             lbl_comanda.BackColor = Color.YellowGreen;
-            lbl_comanda.Font = new Font("Verdana", 16.2F);
-            lbl_comanda.Location = new Point(326, 30);
+            lbl_comanda.Font = new Font("Verdana", 27.75F);
+            lbl_comanda.Location = new Point(460, 10);
+            lbl_comanda.Margin = new Padding(4, 0, 4, 0);
             lbl_comanda.Name = "lbl_comanda";
-            lbl_comanda.Size = new Size(148, 34);
+            lbl_comanda.Size = new Size(194, 45);
             lbl_comanda.TabIndex = 0;
             lbl_comanda.Text = "Comanda";
             // 
+            // btn_incluir
+            // 
+            btn_incluir.BackColor = Color.SpringGreen;
+            btn_incluir.FlatAppearance.BorderSize = 0;
+            btn_incluir.FlatStyle = FlatStyle.Flat;
+            btn_incluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_incluir.Location = new Point(50, 145);
+            btn_incluir.Margin = new Padding(4);
+            btn_incluir.Name = "btn_incluir";
+            btn_incluir.Size = new Size(120, 30);
+            btn_incluir.TabIndex = 16;
+            btn_incluir.Text = "Incluir";
+            btn_incluir.UseVisualStyleBackColor = false;
+            btn_incluir.Click += btn_incluir_Click;
+            // 
+            // lbl_Pesquisar
+            // 
+            lbl_Pesquisar.BackColor = SystemColors.ActiveCaption;
+            lbl_Pesquisar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_Pesquisar.Location = new Point(50, 110);
+            lbl_Pesquisar.Margin = new Padding(4, 0, 4, 0);
+            lbl_Pesquisar.Name = "lbl_Pesquisar";
+            lbl_Pesquisar.Size = new Size(120, 30);
+            lbl_Pesquisar.TabIndex = 15;
+            lbl_Pesquisar.Text = "Pesquisar";
+            // 
+            // txt_Pesquisa
+            // 
+            txt_Pesquisa.Location = new Point(175, 110);
+            txt_Pesquisa.Margin = new Padding(4);
+            txt_Pesquisa.Name = "txt_Pesquisa";
+            txt_Pesquisa.Size = new Size(480, 29);
+            txt_Pesquisa.TabIndex = 14;
+            txt_Pesquisa.TextChanged += txt_Pesquisa_TextChanged;
+            // 
             // FrmComanda
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 500);
+            ClientSize = new Size(1090, 665);
+            Controls.Add(btn_incluir);
+            Controls.Add(lbl_Pesquisar);
+            Controls.Add(txt_Pesquisa);
             Controls.Add(lbl_comanda);
-            Controls.Add(lnk_tab0);
             Controls.Add(groupBox1);
             Controls.Add(btn_close);
+            Font = new Font("Segoe UI", 12F);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
             Name = "FrmComanda";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmComanda";
+            Load += FrmComanda_Load;
             ((System.ComponentModel.ISupportInitialize)btn_close).EndInit();
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,7 +187,12 @@
 
         private PictureBox btn_close;
         private GroupBox groupBox1;
-        private LinkLabel lnk_tab0;
         private Label lbl_comanda;
+        private Button btn_Excluir;
+        private Button btn_Editar;
+        private DataGridView dataGridView1;
+        private Button btn_incluir;
+        private Label lbl_Pesquisar;
+        private TextBox txt_Pesquisa;
     }
 }

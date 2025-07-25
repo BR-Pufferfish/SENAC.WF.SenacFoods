@@ -73,6 +73,14 @@ namespace SenacFoods
                 string senha = txt_senha.Text;
                 string confirmaSenha = txt_confirmaSenha.Text;
                 
+                if (senha != confirmaSenha)
+                {
+                    MessageBox.Show("As senhas não conferem. Por favor, tente novamente.",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
 
                 //atualizar o cardapio
                 var usuario = banco.Usuarios.First(x => x.Id == _usuarioSelecionado.Id);
@@ -102,6 +110,14 @@ namespace SenacFoods
                 string senha = txt_senha.Text;
                 string confirmaSenha = txt_confirmaSenha.Text;
 
+                if (senha != confirmaSenha)
+                {
+                    MessageBox.Show("As senhas não conferem. Por favor, tente novamente.",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
 
                 //Criar um novo usuário;
                 var usuario = new Usuario()

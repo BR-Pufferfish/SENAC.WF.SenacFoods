@@ -1,6 +1,6 @@
 ﻿namespace SenacFoods
 {
-    partial class FrmMesaCad
+    partial class FrmComandaCad
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMesaCad));
             groupBox1 = new GroupBox();
             txt_numeroMesa = new TextBox();
             lbl_NumeroMesa = new Label();
             btn_Cancelar = new Button();
             btn_Salvar = new Button();
-            btn_close = new PictureBox();
-            lbl_comandaCad = new Label();
+            lbl_MesaCad = new Label();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -51,7 +48,7 @@
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
             groupBox1.Size = new Size(1064, 472);
-            groupBox1.TabIndex = 17;
+            groupBox1.TabIndex = 18;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
@@ -67,7 +64,7 @@
             lbl_NumeroMesa.AutoSize = true;
             lbl_NumeroMesa.BackColor = SystemColors.ActiveCaption;
             lbl_NumeroMesa.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_NumeroMesa.Location = new Point(31, 75);
+            lbl_NumeroMesa.Location = new Point(32, 75);
             lbl_NumeroMesa.Name = "lbl_NumeroMesa";
             lbl_NumeroMesa.Size = new Size(139, 30);
             lbl_NumeroMesa.TabIndex = 3;
@@ -85,7 +82,6 @@
             btn_Cancelar.TabIndex = 2;
             btn_Cancelar.Text = "Cancelar";
             btn_Cancelar.UseVisualStyleBackColor = false;
-            btn_Cancelar.Click += btn_Cancelar_Click;
             // 
             // btn_Salvar
             // 
@@ -99,48 +95,32 @@
             btn_Salvar.TabIndex = 1;
             btn_Salvar.Text = "Salvar";
             btn_Salvar.UseVisualStyleBackColor = false;
-            btn_Salvar.Click += btn_Salvar_Click;
             // 
-            // btn_close
+            // lbl_MesaCad
             // 
-            btn_close.BackColor = Color.Red;
-            btn_close.Image = (Image)resources.GetObject("btn_close.Image");
-            btn_close.Location = new Point(1038, 14);
-            btn_close.Margin = new Padding(4, 3, 4, 3);
-            btn_close.Name = "btn_close";
-            btn_close.Size = new Size(36, 34);
-            btn_close.SizeMode = PictureBoxSizeMode.Zoom;
-            btn_close.TabIndex = 16;
-            btn_close.TabStop = false;
-            btn_close.Click += btn_close_Click;
+            lbl_MesaCad.AutoSize = true;
+            lbl_MesaCad.BackColor = Color.FromArgb(255, 255, 128);
+            lbl_MesaCad.Font = new Font("Verdana", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_MesaCad.Location = new Point(330, 15);
+            lbl_MesaCad.Margin = new Padding(4, 0, 4, 0);
+            lbl_MesaCad.Name = "lbl_MesaCad";
+            lbl_MesaCad.Size = new Size(350, 45);
+            lbl_MesaCad.TabIndex = 19;
+            lbl_MesaCad.Text = "Cadastro de Mesa";
             // 
-            // lbl_comandaCad
-            // 
-            lbl_comandaCad.AutoSize = true;
-            lbl_comandaCad.BackColor = Color.FromArgb(255, 255, 128);
-            lbl_comandaCad.Font = new Font("Verdana", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_comandaCad.Location = new Point(335, 15);
-            lbl_comandaCad.Margin = new Padding(4, 0, 4, 0);
-            lbl_comandaCad.Name = "lbl_comandaCad";
-            lbl_comandaCad.Size = new Size(430, 45);
-            lbl_comandaCad.TabIndex = 18;
-            lbl_comandaCad.Text = "Cadastro de Comanda";
-            // 
-            // FrmMesaCad
+            // FrmComandaCad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1090, 572);
+            Controls.Add(lbl_MesaCad);
             Controls.Add(groupBox1);
-            Controls.Add(btn_close);
-            Controls.Add(lbl_comandaCad);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FrmMesaCad";
-            Text = "FrmMesaCad";
+            Name = "FrmComandaCad";
+            Text = "FrmComandaCad";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btn_close).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,7 +132,6 @@
         private Label lbl_NumeroMesa;
         private Button btn_Cancelar;
         private Button btn_Salvar;
-        private PictureBox btn_close;
-        private Label lbl_comandaCad;
+        private Label lbl_MesaCad;
     }
 }

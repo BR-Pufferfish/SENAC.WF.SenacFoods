@@ -67,6 +67,15 @@ namespace SenacFoods
                 //captar os dados da tela
                 int.TryParse(txt_numeroMesa.Text, out var nMesa);
 
+                if (banco.Mesas.Any(m => m.NumeroMesa == nMesa && m.Id != _mesa.Id))
+                {
+                    MessageBox.Show("Já existe uma mesa com esse número",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
                 //atualizar a mesa
                 var mesa = banco.Mesas.First(x => x.Id == _mesa.Id);
                 mesa.NumeroMesa = nMesa;
@@ -89,13 +98,22 @@ namespace SenacFoods
                 //Captar os dados da tela
                 int.TryParse(txt_numeroMesa.Text, out var nMesa);
 
-                //Criar um novo cardapio;
+                if (banco.Mesas.Any(x => x.NumeroMesa == nMesa))
+                {
+                    MessageBox.Show("Já existe uma mesa com esse número",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
+                //Criar uma nova mesa;
                 var mesa = new Mesa()
                 {
                     NumeroMesa = nMesa
                 };
 
-                //Adicionar o cardapio e Salvar as alterações no banco;
+                //Adicionar a mesa e salvar as alterações no banco;
                 banco.Mesas.Add(mesa);
                 banco.SaveChanges();
             }

@@ -35,7 +35,7 @@
             btn_Cancelar = new Button();
             btn_Salvar = new Button();
             btn_close = new PictureBox();
-            lbl_comandaCad = new Label();
+            lbl_mesaCad = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btn_close).BeginInit();
             SuspendLayout();
@@ -114,17 +114,17 @@
             btn_close.TabStop = false;
             btn_close.Click += btn_close_Click;
             // 
-            // lbl_comandaCad
+            // lbl_mesaCad
             // 
-            lbl_comandaCad.AutoSize = true;
-            lbl_comandaCad.BackColor = Color.FromArgb(255, 255, 128);
-            lbl_comandaCad.Font = new Font("Verdana", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_comandaCad.Location = new Point(335, 15);
-            lbl_comandaCad.Margin = new Padding(4, 0, 4, 0);
-            lbl_comandaCad.Name = "lbl_comandaCad";
-            lbl_comandaCad.Size = new Size(430, 45);
-            lbl_comandaCad.TabIndex = 18;
-            lbl_comandaCad.Text = "Cadastro de Comanda";
+            lbl_mesaCad.AutoSize = true;
+            lbl_mesaCad.BackColor = Color.FromArgb(255, 255, 128);
+            lbl_mesaCad.Font = new Font("Verdana", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_mesaCad.Location = new Point(335, 15);
+            lbl_mesaCad.Margin = new Padding(4, 0, 4, 0);
+            lbl_mesaCad.Name = "lbl_mesaCad";
+            lbl_mesaCad.Size = new Size(350, 45);
+            lbl_mesaCad.TabIndex = 18;
+            lbl_mesaCad.Text = "Cadastro de Mesa";
             // 
             // FrmMesaCad
             // 
@@ -134,7 +134,7 @@
             ClientSize = new Size(1090, 572);
             Controls.Add(groupBox1);
             Controls.Add(btn_close);
-            Controls.Add(lbl_comandaCad);
+            Controls.Add(lbl_mesaCad);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMesaCad";
             Text = "FrmMesaCad";
@@ -153,6 +153,6 @@
         private Button btn_Cancelar;
         private Button btn_Salvar;
         private PictureBox btn_close;
-        private Label lbl_comandaCad;
+        private Label lbl_mesaCad;
     }
 }

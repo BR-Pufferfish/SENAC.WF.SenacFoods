@@ -16,5 +16,10 @@ namespace SenacFoods
         {
             InitializeComponent();
         }
+
+        private void txt_nomeCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

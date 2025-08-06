@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btn_adicionar = new Button();
+            dataGridView1 = new DataGridView();
+            cbx_mesa = new ComboBox();
+            cbx_cardapio = new ComboBox();
+            lbl_cardapio = new Label();
+            lbl_mesa = new Label();
             txt_nomeCliente = new TextBox();
             lbl_nomeCliente = new Label();
             btn_Cancelar = new Button();
             btn_Salvar = new Button();
             lbl_comandaCad = new Label();
-            lbl_mesa = new Label();
-            lbl_cardapio = new Label();
-            cbx_cardapio = new ComboBox();
-            cbx_mesa = new ComboBox();
-            dataGridView1 = new DataGridView();
-            btn_adicionar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -64,6 +64,64 @@
             groupBox1.TabIndex = 18;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // btn_adicionar
+            // 
+            btn_adicionar.BackColor = Color.Chartreuse;
+            btn_adicionar.Font = new Font("Segoe UI Black", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_adicionar.Location = new Point(570, 195);
+            btn_adicionar.Margin = new Padding(0);
+            btn_adicionar.Name = "btn_adicionar";
+            btn_adicionar.Size = new Size(50, 50);
+            btn_adicionar.TabIndex = 8;
+            btn_adicionar.Text = "+";
+            btn_adicionar.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(150, 230);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(405, 150);
+            dataGridView1.TabIndex = 7;
+            // 
+            // cbx_mesa
+            // 
+            cbx_mesa.FormattingEnabled = true;
+            cbx_mesa.Location = new Point(150, 145);
+            cbx_mesa.Name = "cbx_mesa";
+            cbx_mesa.Size = new Size(405, 23);
+            cbx_mesa.TabIndex = 6;
+            // 
+            // cbx_cardapio
+            // 
+            cbx_cardapio.FormattingEnabled = true;
+            cbx_cardapio.Location = new Point(150, 195);
+            cbx_cardapio.Name = "cbx_cardapio";
+            cbx_cardapio.Size = new Size(405, 23);
+            cbx_cardapio.TabIndex = 6;
+            // 
+            // lbl_cardapio
+            // 
+            lbl_cardapio.AutoSize = true;
+            lbl_cardapio.BackColor = SystemColors.ActiveCaption;
+            lbl_cardapio.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_cardapio.Location = new Point(40, 190);
+            lbl_cardapio.Name = "lbl_cardapio";
+            lbl_cardapio.Size = new Size(96, 30);
+            lbl_cardapio.TabIndex = 3;
+            lbl_cardapio.Text = "Cardápio";
+            // 
+            // lbl_mesa
+            // 
+            lbl_mesa.AutoSize = true;
+            lbl_mesa.BackColor = SystemColors.ActiveCaption;
+            lbl_mesa.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_mesa.Location = new Point(55, 140);
+            lbl_mesa.Name = "lbl_mesa";
+            lbl_mesa.Size = new Size(63, 30);
+            lbl_mesa.TabIndex = 3;
+            lbl_mesa.Text = "Mesa";
             // 
             // txt_nomeCliente
             // 
@@ -121,63 +179,6 @@
             lbl_comandaCad.Size = new Size(430, 45);
             lbl_comandaCad.TabIndex = 19;
             lbl_comandaCad.Text = "Cadastro de Comanda";
-            // 
-            // lbl_mesa
-            // 
-            lbl_mesa.AutoSize = true;
-            lbl_mesa.BackColor = SystemColors.ActiveCaption;
-            lbl_mesa.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_mesa.Location = new Point(55, 140);
-            lbl_mesa.Name = "lbl_mesa";
-            lbl_mesa.Size = new Size(63, 30);
-            lbl_mesa.TabIndex = 3;
-            lbl_mesa.Text = "Mesa";
-            // 
-            // lbl_cardapio
-            // 
-            lbl_cardapio.AutoSize = true;
-            lbl_cardapio.BackColor = SystemColors.ActiveCaption;
-            lbl_cardapio.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_cardapio.Location = new Point(40, 190);
-            lbl_cardapio.Name = "lbl_cardapio";
-            lbl_cardapio.Size = new Size(96, 30);
-            lbl_cardapio.TabIndex = 3;
-            lbl_cardapio.Text = "Cardápio";
-            // 
-            // cbx_cardapio
-            // 
-            cbx_cardapio.FormattingEnabled = true;
-            cbx_cardapio.Location = new Point(150, 195);
-            cbx_cardapio.Name = "cbx_cardapio";
-            cbx_cardapio.Size = new Size(405, 23);
-            cbx_cardapio.TabIndex = 6;
-            // 
-            // cbx_mesa
-            // 
-            cbx_mesa.FormattingEnabled = true;
-            cbx_mesa.Location = new Point(150, 145);
-            cbx_mesa.Name = "cbx_mesa";
-            cbx_mesa.Size = new Size(405, 23);
-            cbx_mesa.TabIndex = 6;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(150, 230);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(405, 150);
-            dataGridView1.TabIndex = 7;
-            // 
-            // btn_adicionar
-            // 
-            btn_adicionar.Font = new Font("Segoe UI Black", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_adicionar.Location = new Point(570, 195);
-            btn_adicionar.Margin = new Padding(0);
-            btn_adicionar.Name = "btn_adicionar";
-            btn_adicionar.Size = new Size(50, 50);
-            btn_adicionar.TabIndex = 8;
-            btn_adicionar.Text = "+";
-            btn_adicionar.UseVisualStyleBackColor = true;
             // 
             // FrmComandaCad
             // 
